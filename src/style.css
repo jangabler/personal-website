@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Vollkorn';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('vollkorn-regular.woff2') format('woff2'),
+         url('vollkorn-regular.woff') format('woff'),
+         url('vollkorn-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('vollkorn-bold.woff2') format('woff2'),
+         url('vollkorn-bold.woff') format('woff'),
+         url('vollkorn-bold.ttf') format('truetype');
+}
+
+html {
+    overflow-y: scroll;
+    margin: 0 auto;
+    max-width: 720px;
+    font-family: 'Vollkorn', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a, a:link, a:visited, a:hover, a:focus, a:active  {
+    cursor: pointer;
+    color: #0000ff;
+}
+
+@media print {
+    a::after {
+        content: " (" attr(href) ") ";
+    }
+}
+
+summary {
+    cursor: pointer;
+}
+
+main > h1 {
+    font-size: 32px;
+    line-height: 50px;
+}
+
+main > p {
+    font-size: 18px;
+    line-height: 31px;
+}
+
+footer {
+    color: #595959;
+    font-size: 14px;
+    line-height: 25px;
+}
