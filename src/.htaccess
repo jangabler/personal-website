@@ -16,11 +16,11 @@ RewriteRule ^.* - [L,R=403]
 
 ################################################################################
 
-Header always set strict-transport-security "max-age=31536000; includeSubdomains"
+Header always set strict-transport-security "max-age=31536000; includeSubDomains"
 Header set content-security-policy "default-src 'self'"
 Header set referrer-policy "no-referrer"
 Header set x-content-type-options "nosniff"
-Header set x-frame-options "DENY"
+Header set x-frame-options "deny"
 
 ################################################################################
 
