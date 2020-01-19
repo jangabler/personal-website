@@ -57,6 +57,17 @@ a, a:link, a:visited, a:hover, a:focus, a:active  {
 
 /* ************************************************************************** */
 
+.site-navigation {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.site-navigation__link {
+    color: #0000ff;
+}
+
+/* ************************************************************************** */
+
 .site-footer {
     color: #595959;
     font-size: 14px;
