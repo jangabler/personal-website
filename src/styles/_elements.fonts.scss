@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Vollkorn";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/vollkorn-regular.woff2") format("woff2"),
+         url("../fonts/vollkorn-regular.woff") format("woff"),
+         url("../fonts/vollkorn-regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/vollkorn-bold.woff2") format("woff2"),
+         url("../fonts/vollkorn-bold.woff") format("woff"),
+         url("../fonts/vollkorn-bold.ttf") format("truetype");
+}

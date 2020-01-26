@@ -1,0 +1,12 @@
+html {
+    overflow-y: scroll;
+    margin: 0 auto;
+    max-width: 720px;
+    font-family: $font__text;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a, a:link, a:visited, a:hover, a:focus, a:active  {
+    cursor: pointer;
+}

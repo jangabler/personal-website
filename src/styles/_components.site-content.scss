@@ -1,0 +1,19 @@
+.site-content > h1 {
+    font-size: 32px;
+    line-height: 50px;
+}
+
+.site-content > p {
+    font-size: 18px;
+    line-height: 31px;
+}
+
+.site-content a {
+    color: $color__blue;
+}
+
+@media print {
+    .site-content a::after {
+        content: " (" attr(href) ")";
+    }
+}
