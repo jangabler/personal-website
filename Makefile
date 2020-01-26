@@ -1,14 +1,14 @@
 SRC_DIR			:= src
-SRC_HTML_DIR	:= $(SRC_DIR)/html
-SRC_STYLES_DIR	:= $(SRC_DIR)/styles
-SRC_FONTS_DIR	:= $(SRC_DIR)/fonts
-SRC_MISC_DIR	:= $(SRC_DIR)/misc
+SRC_DIR_HTML	:= $(SRC_DIR)/html
+SRC_DIR_STYLES	:= $(SRC_DIR)/styles
+SRC_DIR_FONTS	:= $(SRC_DIR)/fonts
+SRC_DIR_MISC	:= $(SRC_DIR)/misc
 
 DIST_DIR		:= dist
-DIST_HTML_DIR	:= $(DIST_DIR)
-DIST_STYLES_DIR	:= $(DIST_DIR)/styles
-DIST_FONTS_DIR	:= $(DIST_DIR)/fonts
-DIST_MISC_DIR	:= $(DIST_DIR)
+DIST_DIR_HTML	:= $(DIST_DIR)
+DIST_DIR_STYLES	:= $(DIST_DIR)/styles
+DIST_DIR_FONTS	:= $(DIST_DIR)/fonts
+DIST_DIR_MISC	:= $(DIST_DIR)
 
 .PHONY: build
 
@@ -16,16 +16,16 @@ build:
 	@rm -rf $(DIST_DIR)
 
 	@mkdir -p $(DIST_DIR)
-	@mkdir -p $(DIST_HTML_DIR)
-	@mkdir -p $(DIST_STYLES_DIR)
-	@mkdir -p $(DIST_FONTS_DIR)
-	@mkdir -p $(DIST_MISC_DIR)
+	@mkdir -p $(DIST_DIR_HTML)
+	@mkdir -p $(DIST_DIR_STYLES)
+	@mkdir -p $(DIST_DIR_FONTS)
+	@mkdir -p $(DIST_DIR_MISC)
 
-	@cp $(SRC_HTML_DIR)/*.html $(DIST_HTML_DIR)
+	@cp $(SRC_DIR_HTML)/*.html $(DIST_DIR_HTML)
 
 	@sass --no-source-map \
-		$(SRC_STYLES_DIR)/style.scss $(DIST_STYLES_DIR)/style.css
+		$(SRC_DIR_STYLES)/style.scss $(DIST_DIR_STYLES)/style.css
 
-	@cp $(SRC_FONTS_DIR)/{*.woff2,*.woff,*.ttf} $(DIST_FONTS_DIR)
+	@cp $(SRC_DIR_FONTS)/{*.woff2,*.woff,*.ttf} $(DIST_DIR_FONTS)
 
-	@cp $(SRC_MISC_DIR)/{.htaccess,robots.txt} $(DIST_MISC_DIR)
+	@cp $(SRC_DIR_MISC)/{.htaccess,robots.txt} $(DIST_DIR_MISC)
