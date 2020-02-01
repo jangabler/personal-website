@@ -1,0 +1,12 @@
+<?php $title = "403 Forbidden"; ?>
+
+<?php ob_start(); ?>
+
+<h1>403 Forbidden</h1>
+<nav class="site-navigation">
+  <a href="index.html" class="site-navigation__link">← Back to home</a>
+</nav>
+
+<?php $content = ob_get_clean(); ?>
+
+<?php include "_layout.phtml"; ?>

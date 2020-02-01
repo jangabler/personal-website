@@ -1,0 +1,12 @@
+<?php $title = "404 Not Found"; ?>
+
+<?php ob_start(); ?>
+
+<h1>404 Not Found</h1>
+<nav class="site-navigation">
+  <a href="index.html" class="site-navigation__link">← Back to home</a>
+</nav>
+
+<?php $content = ob_get_clean(); ?>
+
+<?php include "_layout.phtml"; ?>

@@ -1,0 +1,16 @@
+<?php $title = "Colophon"; ?>
+
+<?php ob_start(); ?>
+
+<h1>Colophon</h1>
+<p>
+  Typeface: "Vollkorn" by Friedrich Althausen, <a href=
+  "http://vollkorn-typeface.com/">vollkorn-typeface.com</a>
+</p>
+<nav class="site-navigation">
+  <a href="index.html" class="site-navigation__link">← Back to home</a>
+</nav>
+
+<?php $content = ob_get_clean(); ?>
+
+<?php include "_layout.phtml"; ?>
