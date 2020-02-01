@@ -5,6 +5,7 @@ html {
     font-family: $font__text;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 a, a:link, a:visited, a:hover, a:focus, a:active  {
