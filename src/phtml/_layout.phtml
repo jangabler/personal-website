@@ -20,6 +20,12 @@
       <?= $content ?>
     </main>
 
+    <?php if ($title != "Home"): ?>
+    <nav class="site-navigation">
+      <a href="index.html" class="site-navigation__link">← Back to home</a>
+    </nav>
+    <?php endif; ?>
+
     <hr>
 
     <footer class="site-footer">
