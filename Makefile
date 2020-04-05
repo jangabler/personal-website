@@ -11,12 +11,14 @@ FONT_FILES	:= $(patsubst %, dist/fonts/%, \
 
 MISC_FILES	:= dist/.htaccess dist/robots.txt
 
-.PHONY: all clean build
+.PHONY: all distclean installdirs build
 
-all: clean build
+all: distclean installdirs build
 
-clean:
+distclean:
 	@rm -rf dist
+
+installdirs:
 	@mkdir dist dist/fonts dist/styles
 
 build: $(HTML_FILES) $(CSS_FILES) $(FONT_FILES) $(MISC_FILES)
