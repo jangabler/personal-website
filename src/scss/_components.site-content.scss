@@ -3,7 +3,7 @@
     line-height: 50px;
 }
 
-.site-content > p {
+.site-content > *:not(h1) {
     font-size: 20px;
     line-height: 33px;
 }
