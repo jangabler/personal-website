@@ -16,15 +16,15 @@
 
   <body>
 
+    <nav class="site-navigation">
+      <a href="index.html" class="site-navigation__link">Home</a> |
+      <a href="about.html" class="site-navigation__link">About</a> |
+      <a href="contact.html" class="site-navigation__link">Contact</a>
+    </nav>
+
     <main class="site-content">
       <?= $content ?>
     </main>
-
-    <?php if ($title != "Home"): ?>
-    <nav class="site-navigation">
-      <a href="index.html" class="site-navigation__link">← Back to home</a>
-    </nav>
-    <?php endif; ?>
 
     <hr>
 
