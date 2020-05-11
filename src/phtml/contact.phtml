@@ -1,0 +1,14 @@
+<?php $title = "Contact"; ?>
+
+<?php ob_start(); ?>
+
+<h1>Contact</h1>
+<ul>
+  <li><a href="https://github.com/jangabler">GitHub</a></li>
+  <li><a href="https://www.linkedin.com/in/jangabler">LinkedIn</a></li>
+  <li><a rel="me" href="https://mastodon.social/@jangabler">Mastodon</a></li>
+</ul>
+
+<?php $content = ob_get_clean(); ?>
+
+<?php include "_layout.phtml"; ?>
