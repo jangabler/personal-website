@@ -9,7 +9,7 @@ FONT_FILES	:= $(patsubst %, dist/fonts/%, \
 			   $(notdir \
 			   $(wildcard src/fonts/*)))
 
-MISC_FILES	:= dist/.htaccess dist/robots.txt
+MISC_FILES	:= dist/.htaccess dist/robots.txt dist/sitemap.xml
 
 .PHONY: all distclean installdirs build
 
