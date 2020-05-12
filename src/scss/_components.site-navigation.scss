@@ -1,8 +1,12 @@
 .site-navigation {
+
     font-size: 16px;
     line-height: 28px;
-}
 
-.site-navigation__link {
-    color: $color__blue;
+    &__link {
+
+        color: $color__blue;
+
+    }
+
 }

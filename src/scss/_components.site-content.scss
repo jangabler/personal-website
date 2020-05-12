@@ -1,19 +1,33 @@
-.site-content > h1 {
-    font-size: 32px;
-    line-height: 50px;
-}
+.site-content {
 
-.site-content > *:not(h1) {
-    font-size: 20px;
-    line-height: 33px;
-}
+    & > h1 {
 
-.site-content a {
-    color: $color__blue;
-}
+        font-size: 32px;
+        line-height: 50px;
 
-@media print {
-    .site-content a::after {
-        content: " (" attr(href) ")";
     }
+
+    & > *:not(h1) {
+
+        font-size: 20px;
+        line-height: 33px;
+
+    }
+
+    & a {
+
+        color: $color__blue;
+
+    }
+
+    @media print {
+
+        & a::after {
+
+            content: " (" attr(href) ")";
+
+        }
+
+    }
+
 }

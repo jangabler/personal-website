@@ -1,9 +1,13 @@
 .site-footer {
+
+    color: $color__grey;
     font-size: 16px;
     line-height: 28px;
-    color: $color__grey;
-}
 
-.site-footer__link {
-    color: $color__grey;
+    &__link {
+
+        color: $color__grey;
+
+    }
+
 }
