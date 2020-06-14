@@ -3,6 +3,33 @@
     font-size: 16px;
     line-height: 28px;
 
+    &__list {
+
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-left: 0;
+
+    }
+
+    &__item {
+
+        display: inline;
+        list-style-type: none;
+
+        &--h-separator:not(:last-of-type):after {
+
+            content: "-";
+
+        }
+
+        &--v-separator:not(:last-of-type):after {
+
+            content: "|";
+
+        }
+
+    }
+
     &__link {
 
         color: $color__blue;

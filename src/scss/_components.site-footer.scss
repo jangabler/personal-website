@@ -4,6 +4,12 @@
     font-size: 16px;
     line-height: 28px;
 
+    &__note {
+
+        margin-bottom: 0;
+
+    }
+
     &__link {
 
         color: $color__grey;

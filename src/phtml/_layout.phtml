@@ -1,3 +1,14 @@
+<?php
+$primaryNavItems = [
+    [ "name" => "Home",    "href" => "index.html" ],
+    [ "name" => "About",   "href" => "about.html" ],
+    [ "name" => "Contact", "href" => "contact.html" ],
+];
+$secondaryNavItems = [
+    [ "name" => "Privacy policy", "href" => "privacy-policy.html" ],
+    [ "name" => "Colophon",       "href" => "colophon.html" ],
+];
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -17,9 +28,20 @@
   <body>
 
     <nav class="site-navigation">
-      <a href="index.html" class="site-navigation__link">Home</a> |
-      <a href="about.html" class="site-navigation__link">About</a> |
-      <a href="contact.html" class="site-navigation__link">Contact</a>
+      <ul class="site-navigation__list">
+
+        <?php foreach ($primaryNavItems as $primaryNavItem): ?>
+
+        <li class="site-navigation__item site-navigation__item--v-separator">
+          <a href="<?= $primaryNavItem["href"]; ?>"
+             class="site-navigation__link">
+            <?= $primaryNavItem["name"]; ?>
+          </a>
+        </li>
+
+        <?php endforeach; ?>
+
+      </ul>
     </nav>
 
     <main class="site-content">
@@ -29,16 +51,25 @@
     <hr>
 
     <footer class="site-footer">
-      <p>
-        © Copyright 2013 - 2020 Jan Gabler. All rights reserved.
-        <br>
-        <a href="privacy-policy.html" class="site-footer__link">
-          Privacy policy
-        </a> -
-        <a href="colophon.html" class="site-footer__link">
-          Colophon
-        </a>
+      <p class="site-footer__note">
+        © Copyright 2013 - <?= date("Y"); ?> Jan Gabler. All rights reserved.
       </p>
+      <nav class="site-navigation">
+        <ul class="site-navigation__list">
+
+          <?php foreach ($secondaryNavItems as $secondaryNavItem): ?>
+
+          <li class="site-navigation__item site-navigation__item--h-separator">
+            <a href="<?= $secondaryNavItem["href"]; ?>"
+               class="site-navigation__link site-footer__link">
+              <?= $secondaryNavItem["name"]; ?>
+            </a>
+          </li>
+
+          <?php endforeach; ?>
+
+        </ul>
+      </nav>
     </footer>
 
   </body>
