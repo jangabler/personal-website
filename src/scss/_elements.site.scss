@@ -5,12 +5,25 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
+    background-color: $color__white;
+    color: $color__black;
     font-family: $font__text;
     margin: 0 auto;
     max-width: 720px;
     overflow-y: scroll;
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: $font__heading;
 
 }
 
@@ -24,6 +37,13 @@ a {
     &:visited {
 
         cursor: pointer;
+        text-decoration: none;
+
+    }
+
+    &:hover {
+
+        text-decoration: underline;
 
     }
 
