@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
+}
+
 html {
 
     -moz-osx-font-smoothing: grayscale;
@@ -8,6 +16,7 @@ html {
     background-color: $color__white;
     color: $color__black;
     font-family: $font__text;
+    font-variant-numeric: oldstyle-nums;
     margin: 0 auto;
     max-width: 720px;
     overflow-y: scroll;
