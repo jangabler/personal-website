@@ -11,7 +11,7 @@ FONT_FILES	:= $(patsubst %, dist/fonts/%, \
 
 MISC_FILES	:= dist/.htaccess dist/robots.txt dist/sitemap.xml
 
-.PHONY: all distclean installdirs build
+.PHONY: all distclean installdirs build serve
 
 all: distclean installdirs build
 
@@ -34,3 +34,7 @@ dist/fonts/%: src/fonts/%
 
 dist/%: src/misc/%
 	@cp $< $@
+
+serve:
+	@docker build -t jangabler/personal-website .
+	@docker run -dit -p 80:80 jangabler/personal-website
