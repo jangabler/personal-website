@@ -9,6 +9,10 @@ FONT_FILES	:= $(patsubst %, dist/fonts/%, \
 			   $(notdir \
 			   $(wildcard src/fonts/*)))
 
+IMG_FILES	:= $(addprefix dist/img/, \
+			   $(notdir \
+			   $(wildcard src/img/*)))
+
 MISC_FILES	:= dist/.htaccess dist/robots.txt dist/sitemap.xml
 
 .PHONY: all distclean installdirs build serve
@@ -19,9 +23,9 @@ distclean:
 	@rm -rf dist
 
 installdirs:
-	@mkdir dist dist/fonts dist/styles
+	@mkdir -p dist/{styles,fonts,img}
 
-build: $(HTML_FILES) $(CSS_FILES) $(FONT_FILES) $(MISC_FILES)
+build: $(HTML_FILES) $(CSS_FILES) $(FONT_FILES) $(IMG_FILES) $(MISC_FILES)
 
 dist/%.html: src/phtml/%.phtml
 	@php $< | tidy -config html-tidy-configuration-options.txt -o $@
@@ -31,6 +35,10 @@ dist/styles/%.css: src/scss/%.scss
 
 dist/fonts/%: src/fonts/%
 	@cp $< $@
+
+dist/img/%: src/img/%
+	@cp $< $@
+	@cwebp $< -quiet -o $(basename $@).webp
 
 dist/%: src/misc/%
 	@cp $< $@
