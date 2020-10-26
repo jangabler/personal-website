@@ -1,7 +1,9 @@
-$color__black: hsl(  0,   0%,  20%);
-$color__blue:  hsl(240, 100%,  55%);
-$color__grey:  hsl(  0,   0%,  35%);
-$color__white: hsl(  0,   0%, 100%);
+$color__black:       hsl(  0,   0%,  20%);
+$color__blue--dark:  hsl(208,  58%,  20%);
+$color__blue--light: hsl(240, 100%,  55%);
+$color__grey:        hsl(  0,   0%,  35%);
+$color__white:       hsl(  0,   0%, 100%);
+$color__yellow:      hsl( 51, 100%,  50%);
 
 $font__heading: "Source Sans Variable", sans-serif;
 $font__text:    "Source Serif Variable", serif;

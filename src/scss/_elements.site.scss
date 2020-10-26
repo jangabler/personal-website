@@ -1,3 +1,20 @@
+::selection {
+
+    background-color: rgba(
+        red($color__blue--dark),
+        green($color__blue--dark),
+        blue($color__blue--dark),
+        0.99
+    );
+    color: rgba(
+        red($color__white),
+        green($color__white),
+        blue($color__white),
+        0.99
+    );
+
+}
+
 *,
 *::before,
 *::after {
@@ -47,6 +64,12 @@ a {
 
         cursor: pointer;
         text-decoration: none;
+
+    }
+
+    &:focus-visible {
+
+        outline: 2px solid $color__yellow;
 
     }
 

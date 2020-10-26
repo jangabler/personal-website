@@ -28,11 +28,11 @@ $secondaryNavItems = [
   <body>
 
     <nav class="site-navigation">
-      <ul class="site-navigation__list">
+      <ul class="list-inline">
 
         <?php foreach ($primaryNavItems as $primaryNavItem): ?>
 
-        <li class="site-navigation__item site-navigation__item--v-separator">
+        <li class="list-inline__item list-inline__item--v-separator">
           <a href="<?= $primaryNavItem["href"]; ?>"
              class="site-navigation__link">
             <?= $primaryNavItem["name"]; ?>
@@ -52,16 +52,17 @@ $secondaryNavItems = [
 
     <footer class="site-footer">
       <p class="site-footer__note">
-        © Copyright 2013 - <?= date("Y"); ?> Jan Gabler. All rights reserved.
+        © Copyright 2013 - <?= date("Y"); ?> Jan Gabler.
+        <span class="no-wrap">All rights reserved.</span>
       </p>
-      <nav class="site-navigation">
-        <ul class="site-navigation__list">
+      <nav>
+        <ul class="list-inline">
 
           <?php foreach ($secondaryNavItems as $secondaryNavItem): ?>
 
-          <li class="site-navigation__item site-navigation__item--h-separator">
+          <li class="list-inline__item list-inline__item--h-separator">
             <a href="<?= $secondaryNavItem["href"]; ?>"
-               class="site-navigation__link site-footer__link">
+               class="site-footer__link">
               <?= $secondaryNavItem["name"]; ?>
             </a>
           </li>
