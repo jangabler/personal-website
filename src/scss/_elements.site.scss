@@ -67,6 +67,12 @@ a {
 
     }
 
+    &:focus:not(:focus-visible) {
+
+        outline: none;
+
+    }
+
     &:focus-visible {
 
         outline: 2px solid $color__yellow;
@@ -78,5 +84,11 @@ a {
         text-decoration: underline;
 
     }
+
+}
+
+address {
+
+    font-style: normal;
 
 }

@@ -9,13 +9,13 @@
         display: inline;
         list-style-type: none;
 
-        &--h-separator:not(:last-of-type):after {
+        &--h-separator:not(:last-of-type)::after {
 
             content: "-";
 
         }
 
-        &--v-separator:not(:last-of-type):after {
+        &--v-separator:not(:last-of-type)::after {
 
             content: "|";
 

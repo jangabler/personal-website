@@ -20,6 +20,20 @@
 
     }
 
+    & ul {
+
+        list-style-type: none;
+        padding-left: 0;
+
+    }
+
+    & li::before {
+
+        content: "—";
+        margin-right: 12px;
+
+    }
+
     @media print {
 
         & a::after {

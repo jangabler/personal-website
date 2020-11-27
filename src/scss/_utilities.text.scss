@@ -1,0 +1,19 @@
+.no-wrap {
+
+    white-space: nowrap;
+
+}
+
+.reverse {
+
+    direction: rtl;
+    unicode-bidi: bidi-override;
+
+}
+
+.greyed-out {
+
+    color: $color__grey;
+    font-style: italic;
+
+}
