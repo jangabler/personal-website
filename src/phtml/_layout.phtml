@@ -1,4 +1,6 @@
 <?php
+$title = $title ?? "...";
+$content = $content ?? "";
 $primaryNavItems = [
     [ "name" => "Home",      "href" => "index.html" ],
     [ "name" => "About",     "href" => "about.html" ],
@@ -7,7 +9,11 @@ $primaryNavItems = [
 $secondaryNavItems = [
     [ "name" => "Privacy policy",       "href" => "privacy-policy.html" ],
     [ "name" => "Third-party licenses", "href" => "third-party-licenses.html" ],
+    [ "name" => "Back to top",          "href" => "#top" ],
 ];
+$description = sprintf(
+    "The %s page of the personal website of Jan Gabler", strtolower($title)
+);
 ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -16,12 +22,11 @@ $secondaryNavItems = [
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="<?= $title ?> page of the personal website of Jan Gabler">
+    <meta name="description" content="<?= $description; ?>">
 
     <link href="styles/style.css" rel="stylesheet">
 
-    <title>Jan Gabler - <?= $title ?></title>
+    <title>Jan Gabler - <?= $title; ?></title>
 
   </head>
 
