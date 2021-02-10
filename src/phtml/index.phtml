@@ -2,15 +2,22 @@
 
 <?php ob_start(); ?>
 
-<h1>Hello and welcome, <span class="no-wrap">I'm Jan! 👋</span></h1>
-<p>
-  I'm a software developer from Berlin, Germany. This small website shall give
-  you some information <a href="about.html">about me</a> and leads you to <a
-  href="elsewhere.html">me elsewhere</a> in the World Wide Web.
-</p>
-<p>
-  <b>Have a great day!</b>
-</p>
+<section class="welcome__text">
+  <h1>Hello and welcome, <span class="no-wrap">I'm Jan! 👋</span></h1>
+  <p>
+    This small website shall give you some information <a href="about.html">
+    about me</a> and also leads you to <a href="elsewhere.html">me elsewhere
+    </a> in the World Wide Web.
+  </p>
+  <p>
+    <b>Have a great day!</b>
+  </p>
+</section>
+
+<picture class="welcome__portrait">
+  <source srcset="img/memoji.webp" type="image/webp">
+  <img src="img/memoji.png" alt="Me as a memoji" height="192" width="192">
+</picture>
 
 <?php $content = ob_get_clean(); ?>
 

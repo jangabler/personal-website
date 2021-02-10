@@ -1,20 +1,61 @@
 .site-footer {
-
-    color: $color__grey;
+    border-top: 0.0625rem solid $color__grey--dark;
+    color: $color__grey--dark;
     font-family: $font__heading;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
 
-    &__note {
+.site-footer__note {
+    margin-bottom: 0;
+    margin-top: 1.25rem;
+}
 
-        margin-bottom: 0;
+.site-footer__list {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+}
 
+@media only screen and (max-width: $breakpoint__small) {
+    .site-footer__list {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 1fr 1fr;
     }
+}
 
-    &__link {
+.site-footer__item {
+    display: inline;
+    list-style-type: none;
+}
 
-        color: $color__grey;
-
+@media only screen and (max-width: $breakpoint__small) {
+    .site-footer__item {
+        background-color: $color__grey--light;
+        display: initial;
+        line-height: 2.4;
     }
+}
 
+.site-footer__item--separator:not(:last-of-type)::after {
+    content: "-";
+}
+
+@media only screen and (max-width: $breakpoint__small) {
+    .site-footer__item--separator:not(:last-of-type)::after {
+        content: initial;
+    }
+}
+
+.site-footer__link {
+    color: $color__grey--dark;
+}
+
+@media only screen and (max-width: $breakpoint__small) {
+    .site-footer__link {
+        display: inline-block;
+        padding: 0 0.5rem;
+        width: 100%;
+    }
 }

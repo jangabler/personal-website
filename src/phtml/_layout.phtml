@@ -24,20 +24,25 @@ $description = sprintf(
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?= $description; ?>">
 
+    <link href="img/favicon.svg" rel="icon">
+    <link href="fonts/SourceSansVariable-Roman.ttf.woff2" rel="preload"
+          as="font" type="font/woff2" crossorigin>
+    <link href="fonts/SourceSerifVariable-Roman.ttf.woff2" rel="preload"
+          as="font" type="font/woff2" crossorigin>
     <link href="styles/style.css" rel="stylesheet">
 
     <title>Jan Gabler - <?= $title; ?></title>
 
   </head>
 
-  <body>
+  <body class="layout">
 
-    <nav class="site-navigation">
-      <ul class="list-inline">
+    <nav class="layout__item site-navigation">
+      <ul class="site-navigation__list">
 
         <?php foreach ($primaryNavItems as $primaryNavItem): ?>
 
-        <li class="list-inline__item list-inline__item--v-separator">
+        <li class="site-navigation__item site-navigation__item--separator">
           <a href="<?= $primaryNavItem["href"]; ?>"
              class="site-navigation__link">
             <?= $primaryNavItem["name"]; ?>
@@ -49,23 +54,23 @@ $description = sprintf(
       </ul>
     </nav>
 
-    <main class="site-content">
+    <main class="layout__item site-content
+    <?php if (strcmp($title, "Home") == 0): ?>welcome<?php endif; ?>
+    ">
       <?= $content ?>
     </main>
 
-    <hr>
-
-    <footer class="site-footer">
+    <footer class="layout__item site-footer">
       <p class="site-footer__note">
         © Copyright 2013 - <?= date("Y"); ?> Jan Gabler.
         <span class="no-wrap">All rights reserved.</span>
       </p>
       <nav>
-        <ul class="list-inline">
+        <ul class="site-footer__list">
 
           <?php foreach ($secondaryNavItems as $secondaryNavItem): ?>
 
-          <li class="list-inline__item list-inline__item--h-separator">
+          <li class="site-footer__item site-footer__item--separator">
             <a href="<?= $secondaryNavItem["href"]; ?>"
                class="site-footer__link">
               <?= $secondaryNavItem["name"]; ?>

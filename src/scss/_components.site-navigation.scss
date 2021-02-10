@@ -1,18 +1,31 @@
 .site-navigation {
-
     background-color: $color__blue--dark;
     color: $color__white;
     font-family: $font__heading;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
-    line-height: 42px;
-    padding: 0 8px;
+    line-height: 2.625rem;
+    padding: 0 0.5rem;
+}
 
-    &__link {
+.site-navigation__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+}
 
-        color: inherit;
-        padding: 0 8px;
+.site-navigation__item {
+    list-style-type: none;
+}
 
-    }
+.site-navigation__item--separator:not(:last-of-type)::after {
+    content: "|";
+    padding-right: 0.25rem;
+}
 
+.site-navigation__link {
+    color: inherit;
+    padding: 0 0.5rem;
 }

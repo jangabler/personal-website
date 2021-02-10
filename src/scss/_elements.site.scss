@@ -1,5 +1,4 @@
 ::selection {
-
     background-color: rgba(
         red($color__blue--dark),
         green($color__blue--dark),
@@ -12,19 +11,15 @@
         blue($color__white),
         0.99
     );
-
 }
 
 *,
 *::before,
 *::after {
-
     box-sizing: border-box;
-
 }
 
 html {
-
     -moz-osx-font-smoothing: grayscale;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -34,12 +29,9 @@ html {
     color: $color__black;
     font-family: $font__text;
     font-variant-numeric: oldstyle-nums;
-    margin: 0 auto;
-    max-width: 720px;
     overflow-y: scroll;
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
-
 }
 
 h1,
@@ -48,47 +40,27 @@ h3,
 h4,
 h5,
 h6 {
-
     font-family: $font__heading;
-
 }
 
-a {
-
-    &,
-    &:active,
-    &:focus,
-    &:hover,
-    &:link,
-    &:visited {
-
-        cursor: pointer;
-        text-decoration: none;
-
-    }
-
-    &:focus:not(:focus-visible) {
-
-        outline: none;
-
-    }
-
-    &:focus-visible {
-
-        outline: 2px solid $color__yellow;
-
-    }
-
-    &:hover {
-
-        text-decoration: underline;
-
-    }
-
+a,
+a:active,
+a:focus,
+a:hover,
+a:link,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
 }
 
-address {
+a:focus:not(:focus-visible) {
+    outline: none;
+}
 
-    font-style: normal;
+a:focus-visible {
+    outline: 0.125rem solid $color__yellow;
+}
 
+a:hover {
+    text-decoration: underline;
 }

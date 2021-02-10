@@ -1,3 +1,5 @@
+include secrets.mk
+
 HTML_FILES	:= $(patsubst %.phtml, dist/%.html, \
 			   $(filter-out _%.phtml, \
 			   $(notdir \
@@ -15,7 +17,7 @@ IMG_FILES	:= $(addprefix dist/img/, \
 
 MISC_FILES	:= dist/.htaccess dist/robots.txt dist/sitemap.xml
 
-.PHONY: all distclean installdirs build serve
+.PHONY: all distclean installdirs build deploy serve
 
 all: distclean installdirs build
 
@@ -36,12 +38,18 @@ dist/styles/%.css: src/scss/%.scss
 dist/fonts/%: src/fonts/%
 	@cp $< $@
 
-dist/img/%: src/img/%
+dist/img/%.png: src/img/%.png
 	@cp $< $@
 	@cwebp $< -quiet -o $(basename $@).webp
 
+dist/img/%.svg: src/img/%.svg
+	@cp $< $@
+
 dist/%: src/misc/%
 	@cp $< $@
+
+deploy:
+	@sftp $(SFTP_USERNAME)@$(SFTP_HOSTNAME):$(SFTP_DIRECTORY)
 
 serve:
 	@docker build -t jangabler/personal-website .

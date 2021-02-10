@@ -1,9 +1,13 @@
-$color__black:       hsl(  0,   0%,  20%);
-$color__blue--dark:  hsl(208,  58%,  20%);
-$color__blue--light: hsl(240, 100%,  55%);
-$color__grey:        hsl(  0,   0%,  35%);
-$color__white:       hsl(  0,   0%, 100%);
-$color__yellow:      hsl( 51, 100%,  50%);
+$breakpoint__small: 33.75rem;
+$breakpoint__large: 45rem;
+
+$color__black:       hsla(  0,   0%,  20%, 1.0);
+$color__blue--dark:  hsla(208,  58%,  20%, 1.0);
+$color__blue--light: hsla(240, 100%,  55%, 1.0);
+$color__grey--dark:  hsla(  0,   0%,  35%, 1.0);
+$color__grey--light: hsla(  0,   0%,  95%, 1.0);
+$color__white:       hsla(  0,   0%, 100%, 1.0);
+$color__yellow:      hsla( 51, 100%,  50%, 1.0);
 
 $font__heading: "Source Sans Variable", sans-serif;
 $font__text:    "Source Serif Variable", serif;

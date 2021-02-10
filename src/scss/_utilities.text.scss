@@ -1,19 +1,15 @@
 .no-wrap {
-
     white-space: nowrap;
-
 }
 
-.reverse {
-
+.obfuscate {
+    -webkit-user-select: none;
     direction: rtl;
     unicode-bidi: bidi-override;
-
+    user-select: none;
 }
 
 .greyed-out {
-
-    color: $color__grey;
+    color: $color__grey--dark;
     font-style: italic;
-
 }
