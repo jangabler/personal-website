@@ -52,5 +52,4 @@ deploy:
 	@sftp $(SFTP_USERNAME)@$(SFTP_HOSTNAME):$(SFTP_DIRECTORY)
 
 serve:
-	@docker build -t jangabler/personal-website .
-	@docker run -dit -p 80:80 jangabler/personal-website
+	@php -S localhost:8000 -t dist
