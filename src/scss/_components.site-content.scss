@@ -16,15 +16,8 @@
 }
 
 .site-content ul {
-    list-style-type: none;
-    padding-left: 1.75rem;
-}
-
-.site-content li::before {
-    content: "—";
-    display: inline-block;
-    margin-left: -1.75rem;
-    width: 1.75rem;
+    list-style-type: "— ";
+    padding-left: 1.7rem;
 }
 
 @media print {
