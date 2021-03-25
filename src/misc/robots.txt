@@ -1,3 +1,8 @@
 User-agent: ia_archiver
 Disallow: /
+
+User-agent: *
+Disallow: /img/me.webp
+Disallow: /img/me.png
+
 Sitemap: https://www.jangabler.de/sitemap.xml
