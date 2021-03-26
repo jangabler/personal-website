@@ -49,7 +49,8 @@ dist/%: src/misc/%
 	@cp $< $@
 
 deploy:
-	@sftp $(SFTP_USERNAME)@$(SFTP_HOSTNAME):$(SFTP_DIRECTORY)
+	@sftp $(SFTP_USERNAME)@$(SFTP_HOSTNAME):$(SFTP_DIRECTORY) < \
+	sftp-batchfile.txt
 
 serve:
 	@php -S localhost:8000 -t dist

@@ -1,0 +1,14 @@
+rm fonts/*
+rmdir fonts
+
+rm img/*
+rmdir img
+
+rm styles/*
+rmdir styles
+
+rm *
+rm .htaccess
+
+put -R ./dist/*
+put ./dist/.htaccess
