@@ -15,7 +15,7 @@ IMG_FILES	:= $(addprefix dist/img/, \
 			   $(notdir \
 			   $(wildcard src/img/*)))
 
-MISC_FILES	:= dist/.htaccess dist/robots.txt dist/sitemap.xml
+MISC_FILES	:= $(addprefix dist/, .htaccess robots.txt sitemap.xml)
 
 .PHONY: all distclean installdirs build deploy serve
 
