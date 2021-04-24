@@ -14,6 +14,10 @@ RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_USER_AGENT} archive.org_bot [NC]
 RewriteRule ^.* - [L,R=403]
 
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !www.jangabler.de [NC]
+RewriteRule \.(svg|webp|png)$ - [F,NC]
+
 ################################################################################
 
 Header always set strict-transport-security "max-age=31536000; includeSubDomains"
