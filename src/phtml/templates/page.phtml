@@ -1,5 +1,9 @@
 <?php
+$currentFile = sprintf("%s.html", basename($_SERVER["SCRIPT_NAME"], ".phtml"));
 $title = $title ?? "...";
+$description = sprintf(
+    "The %s page of Jan Gabler’s personal website", strtolower($title)
+);
 $content = $content ?? "";
 $primaryNavItems = [
     [ "name" => "Home",      "href" => "index.html" ],
@@ -12,9 +16,6 @@ $secondaryNavItems = [
     [ "name" => "Third-party licenses", "href" => "third-party-licenses.html" ],
     [ "name" => "Back to top",          "href" => "#top" ],
 ];
-$description = sprintf(
-    "The %s page of the personal website of Jan Gabler", strtolower($title)
-);
 ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -25,6 +26,7 @@ $description = sprintf(
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?= $description; ?>">
 
+    <link href="https://www.jangabler.de/<?= $currentFile; ?>" rel="canonical">
     <link href="img/favicon.svg" rel="icon" type="image/svg+xml">
     <link href="fonts/SourceSansVariable-Roman.ttf.woff2" rel="preload"
           as="font" type="font/woff2" crossorigin>
@@ -32,7 +34,7 @@ $description = sprintf(
           as="font" type="font/woff2" crossorigin>
     <link href="styles/style.css" rel="stylesheet">
 
-    <title>Jan Gabler - <?= $title; ?></title>
+    <title><?= $title; ?> - Jan Gabler </title>
 
   </head>
 
@@ -58,7 +60,7 @@ $description = sprintf(
     <main class="layout__item site-content
     <?php if (strcmp($title, "Home") == 0): ?>welcome<?php endif; ?>
     ">
-      <?= $content ?>
+      <?= $content; ?>
     </main>
 
     <footer class="layout__item site-footer">
