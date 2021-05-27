@@ -1,16 +1,26 @@
 <?php
 $currentFile = sprintf("%s.html", basename($_SERVER["SCRIPT_NAME"], ".phtml"));
+
+$canonicalUrl = sprintf(
+    "https://www.jangabler.de/%s",
+    strcmp($currentFile, "index.html") == 0 ? "" : $currentFile
+);
+
 $title = $title ?? "...";
+
 $description = sprintf(
     "The %s page of Jan Gabler’s personal website", strtolower($title)
 );
+
 $content = $content ?? "";
+
 $primaryNavItems = [
     [ "name" => "Home",      "href" => "index.html" ],
     [ "name" => "About",     "href" => "about.html" ],
     [ "name" => "Uses",      "href" => "uses.html" ],
     [ "name" => "Elsewhere", "href" => "elsewhere.html" ],
 ];
+
 $secondaryNavItems = [
     [ "name" => "Privacy policy",       "href" => "privacy-policy.html" ],
     [ "name" => "Third-party licenses", "href" => "third-party-licenses.html" ],
@@ -26,7 +36,7 @@ $secondaryNavItems = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?= $description; ?>">
 
-    <link href="https://www.jangabler.de/<?= $currentFile; ?>" rel="canonical">
+    <link href="<?= $canonicalUrl; ?>" rel="canonical">
     <link href="img/favicon.svg" rel="icon" type="image/svg+xml">
     <link href="fonts/SourceSansVariable-Roman.ttf.woff2" rel="preload"
           as="font" type="font/woff2" crossorigin>
