@@ -23,6 +23,7 @@ RewriteRule \.(svg|webp|png)$ - [F,NC]
 
 ################################################################################
 
+Header always set permissions-policy "interest-cohort=()"
 Header always set strict-transport-security "max-age=31536000; includeSubDomains"
 Header set content-security-policy "default-src 'self'"
 Header set referrer-policy "no-referrer"
