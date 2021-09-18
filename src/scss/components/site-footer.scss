@@ -17,7 +17,7 @@
     padding-left: 0;
 }
 
-@media only screen and (max-width: $breakpoint__small) {
+@include mq-phone {
     .site-footer__list {
         display: grid;
         gap: 0.5rem;
@@ -30,7 +30,7 @@
     list-style-type: none;
 }
 
-@media only screen and (max-width: $breakpoint__small) {
+@include mq-phone {
     .site-footer__item {
         background-color: $color__grey--light;
         display: initial;
@@ -42,7 +42,7 @@
     content: "-";
 }
 
-@media only screen and (max-width: $breakpoint__small) {
+@include mq-phone{
     .site-footer__item--separator:not(:last-of-type)::after {
         content: initial;
     }
@@ -52,7 +52,7 @@
     color: $color__grey--dark;
 }
 
-@media only screen and (max-width: $breakpoint__small) {
+@include mq-phone {
     .site-footer__link {
         display: inline-block;
         padding: 0 0.5rem;

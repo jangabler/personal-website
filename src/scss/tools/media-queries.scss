@@ -1,0 +1,17 @@
+@mixin mq-print {
+    @media print {
+        @content;
+    }
+}
+
+@mixin mq-phone {
+    @media only screen and (max-width: $breakpoint__small) {
+        @content;
+    }
+}
+
+@mixin mq-tablet {
+    @media only screen and (max-width: $breakpoint__large) {
+        @content;
+    }
+}

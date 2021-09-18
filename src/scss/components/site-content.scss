@@ -20,7 +20,7 @@
     padding-left: 1.7rem;
 }
 
-@media print {
+@include mq-print {
     .site-content a::after {
         content: " (" attr(href) ")";
     }
