@@ -1,37 +1,37 @@
-.welcome {
+.hero {
     align-items: center;
     display: flex;
 }
 
 @media only screen and (max-width: $breakpoint__large) {
-    .welcome {
+    .hero {
         flex-direction: column-reverse;
     }
 }
 
-.welcome__text > * {
+.hero__text > * {
     font-size: 1.25rem;
     line-height: 1.6;
 }
 
 // Override :-webkit-any(article, aside, nav, section) h1 { /* ... */ }
 // of the user agent stylesheet.
-.welcome__text > h1 {
+.hero__text > h1 {
     font-size: 2rem;
     margin-block-end: 0.67em;
     margin-block-start: 0.67em;
 }
 
 @media only screen and (max-width: $breakpoint__large) {
-    .welcome__text > :first-child {
+    .hero__text > :first-child {
         margin-top: 0;
     }
 }
 
-.welcome__portrait {
+.hero__portrait {
     margin: 1.25rem;
 }
 
-.welcome__portrait > img {
+.hero__portrait > img {
     border-radius: 50%;
 }
